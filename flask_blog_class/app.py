@@ -35,6 +35,12 @@ def index():
 
 
 # route to create a post
+@app.route('/create/', methods=('GET', 'POST'))
+def create():
+    #see if the page is being requested with a POST or GET request 
+    if request.method == 'POST':
+        pass
 
+    return render_template('create.html')
 
 app.run(port=5008)
